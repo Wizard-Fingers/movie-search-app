@@ -1,0 +1,27 @@
+@tailwind base;
+ @tailwind components; 
+ @tailwind utilities;
+
+:root {
+--background: #0C161E;
+--text-primary: white;
+--text-secondary: gray;
+}
+[data-theme="light"] {
+  --background: white;
+  --text-primary: black;
+  --text-secondary: gray;
+}
+
+h1 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: Bold;
+  font-size: 2.5rem;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+  background: #0C161E;
+ }
