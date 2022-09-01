@@ -4,7 +4,7 @@ import  Card  from './card';
 
 function Data() {
   //card component props
-  const [info] = useState([
+  const [info, setInfo] = useState([
     {
       title: "The Shawshank Redemption",
       image:
@@ -30,12 +30,13 @@ function Data() {
     },
   ]);
 
+
 return (
-  <div className="">
+  <>
     {info.map((movie) => (
       <Card movie={movie} key={movie.id} />
     ))}
-  </div>
+  </>
 );
 }
 

@@ -22,7 +22,7 @@ const LeftModel = ({ setOpenLeftModel }) => {
         <div className="flex flex-col items-center justify-evenly">
           <h1 className="text-white">Info</h1>
           <p className="text-gray-400">
-            this is a project based off of the image below
+            this is a project based off of the image below but with a few changes mostly Dark and Light mode
           </p>
           <img
             src={example}

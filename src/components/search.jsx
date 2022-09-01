@@ -20,7 +20,7 @@ const Search = () => {
   return (
     <div>
       <p className="flex justify-around text-gray-400 font-family:Roboto font-bold">
-       from "{searchText}"
+        from "{searchText}"
       </p>
       <div
         className="
@@ -35,6 +35,8 @@ const Search = () => {
         <div className="relative">
           <input
             type="text"
+            onChange={onChange}
+            // placeholder="movie search"
             className="
             bg-gray-700 
             h-[4rem] 
@@ -51,9 +53,8 @@ const Search = () => {
                 text-white
                  text-2xl
                   hover:bg-black
-                   ease-in-out duration-500"
-            // placeholder="movie search"
-            onChange={onChange}
+                   ease-in-out duration-500
+                   hover:scale-105"
           />
           <div
             className="
@@ -61,7 +62,9 @@ const Search = () => {
            top-5
            left-5"
           >
-            <FaSearch style={styleForSearchIcon} />
+            <FaSearch
+              style={styleForSearchIcon}
+            />
           </div>
         </div>
       </div>
