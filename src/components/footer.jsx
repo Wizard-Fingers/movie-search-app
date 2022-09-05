@@ -6,7 +6,7 @@ export const Footer = () => {
     const StyleForFooterIcons = { color: "white", fontSize: "1.5rem" }
   return (
     <div
-      className="fixed inset-x-0 bottom-0  bg-gray-700 hover:bg-black
+      className="position:relative inset-x-0 bottom-0  bg-gray-700 hover:bg-black
                    ease-in-out duration-500 flex justify-center"
     >
       <a href="https://www.facebook.com/arthur.b.beckett/">

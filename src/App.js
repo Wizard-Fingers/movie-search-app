@@ -54,9 +54,10 @@ function App() {
       className="
     bg-[#F5F5F5]
     dark:bg-[#0C161E]
-    bg-center
-     w-[100vw]
-     h-[100vw] "
+    min-h-screen
+    bg-cover
+     dark:w-[100vw]
+     dark:h-[100vw] "
     >
       <nav>
         <div
@@ -131,10 +132,13 @@ function App() {
         )}
       </div>
 
-      <div className="max-w-[1240px] mx-auto grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4">
+      <div className="max-w-[1240px] mx-auto grid xlg:grid-cols-4 xl:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4">
         <Data />
       </div>
-      <Footer />
+      <Footer
+        // make the footer sticky
+       // className=" position: relative; bottom: 0; left: 0; right: 0; "
+      />
     </div>
   );
 }

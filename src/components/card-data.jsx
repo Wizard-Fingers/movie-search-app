@@ -16,7 +16,7 @@ function Data() {
     {
       title: "The Godfather",
       image:
-    "https://media.movieassets.com/static/images/items/movies/posters/67290fda6339963993b32b65ec4934c8.jpg",
+        "https://media.movieassets.com/static/images/items/movies/posters/67290fda6339963993b32b65ec4934c8.jpg",
       year: "1972",
       rating: "9.2",
       id: 2,
@@ -27,6 +27,14 @@ function Data() {
       year: "1974",
       rating: "9.0",
       id: 3,
+    },
+    {
+      title: "The Shawshank Redemption",
+      image:
+        "https://media.movieassets.com/static/images/items/movies/posters/a515035291f650ed7cd2486191845d13.jpg",
+      year: "1994",
+      rating: "9.3",
+      id: 1,
     },
   ]);
 

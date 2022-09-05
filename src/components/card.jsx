@@ -8,7 +8,9 @@ const Card = ({ movie, message }) => {
     <div className="
     flex
     content-center
-    cursor-pointer"
+    cursor-pointer
+    m-[5px]
+    p-2"
     >
       <div key={movie.id} className="
       flex
