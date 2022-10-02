@@ -58,15 +58,16 @@ function App() {
 		setSearchText(e.target.value);
 	};
 
+	useEffect(() => {
+		const baseURL = "https://api.themoviedb.org/3/";
+		const popularBaseURL =
+			baseURL +
+			"discover/movie?sort_by=popularity.desc&api_key=04c35731a5ee918f014970082a0088b1&page=1";
+		const searchBaseURL =
+			baseURL +
+			"search/movie?&api_key=04c35731a5ee918f014970082a0088b1&query=" +
+			searchText;
 
-	useEffect(() => {	
-	const baseURL = "https://api.themoviedb.org/3/";
-	const popularBaseURL =
-		baseURL +
-		"discover/movie?sort_by=popularity.desc&api_key=04c35731a5ee918f014970082a0088b1&page=1";
-	const searchBaseURL =
-		baseURL +
-		"search/movie?&api_key=04c35731a5ee918f014970082a0088b1&query=" + searchText;
 
 		if (searchText !== "") {
 			axios.get(searchBaseURL).then((response) => {
@@ -78,12 +79,11 @@ function App() {
 			});
 		}
 	}, [searchText]);
-  
-  // useEffect to keep track of the search query
-  // in the useEffect, log it to the console
-  // useState to store of the input value (query)
-  // value as the input attribute which is equal to the state (query)
-	//card component props
+
+	// useEffect to keep track of the search query
+	// in the useEffect, log it to the console
+	// useState to store of the input value (query)
+	// value as the input attribute which is equal to the state (query)
 
 	const [movies, setMovies] = useState([]);
 
