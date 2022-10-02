@@ -1,29 +1,17 @@
 
-import React, { useState } from "react";
+import React from "react";
 import {FaSearch} from 'react-icons/fa'
 
-const Search = () => {
+const Search = ({ searchText, onSearchChange}) => {
   const styleForSearchIcon = { color: "white", fontSize: "1.4rem" }
-//default text above search bar
-  const defaultText = "your search"
-//onchange function for search bar text as it is being typed
-  const [searchText, setSearchText] = useState(defaultText)
-//onchange function for search bar text as it is being typed but keeping the default text if the user deletes all the text
-  const onChange = (e) => {
-    if (e.target.value === "") {
-      setSearchText(defaultText)
-    } else {
-      setSearchText(e.target.value)
-    }
-  }
 
   return (
-    <div>
-      <p className="flex justify-around text-gray-400 font-family:Roboto font-bold">
-        from "{searchText}"
-      </p>
-      <div
-        className="
+		<div>
+			<p className="flex justify-around text-gray-400 font-family:Roboto font-bold">
+				from "{searchText}"
+			</p>
+			<div
+				className="
       p-8
       flex
       justify-evenly
@@ -31,13 +19,13 @@ const Search = () => {
       px-4
       sm:px-6
       lg:px-8"
-      >
-        <div className="relative">
-          <input
-            type="text"
-            onChange={onChange}
-            // placeholder="movie search"
-            className="
+			>
+				<div className="relative">
+					<input
+						type="text"
+						onChange={onSearchChange}
+						// placeholder="movie search"
+						className="
             bg-gray-700 
             h-[4rem] 
             w-[21rem] 
@@ -55,20 +43,18 @@ const Search = () => {
                   hover:bg-black
                    ease-in-out duration-500
                    hover:scale-105"
-          />
-          <div
-            className="
+					/>
+					<div
+						className="
           absolute
            top-5
            left-5"
-          >
-            <FaSearch
-              style={styleForSearchIcon}
-            />
-          </div>
-        </div>
-      </div>
-    </div>
+					>
+						<FaSearch style={styleForSearchIcon} />
+					</div>
+				</div>
+			</div>
+		</div>
   );
 }
 export default Search
